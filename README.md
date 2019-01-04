@@ -56,7 +56,7 @@ In situations where other attributions are being used fm may be started as follo
   fm.start( {
     current_path: 'brand',
     current_path_version: '1',
-    program_id: 'program_name',
+    program_id: 'addyi',
     program_version: 'client',
     page_name: window.location.pathname,
     alt_source: 'Source name'
