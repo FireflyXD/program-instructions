@@ -25,7 +25,7 @@ At the bottom of the `<body>` tag include the following scripts on all pages:
 
 Step 2: Add the destination URL and `className` to all CTA `<a>` elements that should drive to Firefly XD Path
 ```
-<a href="https://addyinow.fireflyxd.com/path/3ree/" class="fm-link">Get X Now</a>
+<a href="https://addyi.fireflyxd.com" class="fm-link">Get X Now</a>
 ```
 For any CTA link simply append the class name `fm-link` (i.e., `<a href="site.fireflyxd.com" class="fm-link">Link Out</a>`.
 
