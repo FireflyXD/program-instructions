@@ -149,13 +149,13 @@ This is my
 >.
 ```
 
-### Putting it all together
+## Putting it all together
 
 There are varying levels of complexity as it relates to integrating fm into a client's asset.
 
 To get a sense of how the integration works, you may copy and paste the HTML page texts below into simple HTML files, and run them locally for testing purposes.
 
-## Simple integration
+### Simple integration
 
 The simplest integration, which includes only the base elements needed for an integration, would look like the following. The following would be added to any page that includes a CTA button that leads to a Populus Media path:
 
@@ -189,7 +189,7 @@ The simplest integration, which includes only the base elements needed for an in
 </html>
 ```
 
-## More complex integration
+### More complex integration
 
 For an integration that includes Google Analytics, an explicitly-set UTM parameter and an alternate source, the page would be similar to the following:
 
