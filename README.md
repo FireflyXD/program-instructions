@@ -165,7 +165,7 @@ To get a sense of how the integration works, you may copy and paste the HTML pag
 
 ### Simple integration
 
-The simplest integration, which includes only the base elements needed for an integration, would look like the following. The following would be added to any page that includes a CTA button that leads to a Populus Media path:
+The simplest integration, which includes only the base elements needed for an integration, would look like the following. The `<script>` elements would be added to any page that includes a CTA button that leads to a Populus Media path:
 
 ```html
 <!DOCTYPE html>
