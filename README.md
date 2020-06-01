@@ -1,14 +1,14 @@
-# Firefly XD Website Tracking Code Instructions
+# Populus Media Website Tracking Code Instructions
 ## Introduction
-The Firefly XD Website Tracking Code is designed to seamlessly integrate any website with the Firefly XD Path. It serves two key functions:
+The Populus Media Website Tracking Code is designed to seamlessly integrate any website with the Populus Media Path. It serves two key functions:
 
-1. User behavior analytics - by tracking a user's behavior on the website (e.g. pageviews, time on page, sessions, etc), we're able to tie behavior from the website to down-funnel performance within the Firefly XD platform.
+1. User behavior analytics - by tracking a user's behavior on the website (e.g. pageviews, time on page, sessions, etc), we're able to tie behavior from the website to down-funnel performance within the Populus Media platform.
 
-2. CTA connectivity - the tracking code automatically connects CTA buttons that drive to the Firefly XD Path with proper user identifiers to allow cross-domain analysis.
+2. CTA connectivity - the tracking code automatically connects CTA buttons that drive to the Populus Media Path with proper user identifiers to allow cross-domain analysis.
 
 ## How to install
 
-fm-slim is generally used by Firefly XD (FXD) clients to populate links in call-to-action buttons that link to an FXD path.
+fm-slim is generally used by Populus Media clients to populate links in call-to-action buttons that link to a Populus Media path.
 
 The fm-slim package picks out links from a page by looking for `fm-link` in the class of any `<a>` tags. It will replace the href inside any `<a>` tags with a link as configured in the `fm.start()` function (more on `fm.start()` below).
 
@@ -21,7 +21,7 @@ In order to populate a link inside a call-to-action button, the fm-slim package 
 ```html
 <script
   type="text/javascript"
-  src="https://fm.fireflyxd.io/3.1/fm-slim.js"
+  src="https://fm.populus-media.net/3.2/fm-slim.js"
 ></script>
 ```
 
@@ -77,14 +77,14 @@ If the optional Google Analytics ID (`ga_id`) is set, the final link would look 
 This is my
 <a
   class="fm-link"
-  href="https://nextgenmedicine.fireflyxd.com/?ga_id=SOME_GA_ID&alt_source=mainsite&engagement_id=GENERATED_FIREFLY_ENGAGEMENT_ID&master_id=GENERATED_FIREFLY_MASTER_ID&"
+  href="https://nextgenmedicine.populus-media.net/?ga_id=SOME_GA_ID&alt_source=mainsite&engagement_id=GENERATED_POPULUS_MEDIA_ENGAGEMENT_ID&master_id=GENERATED_POPULUS_MEDIA_MASTER_ID&"
   >call-to-action link</a
 >.
 ```
 
 ### UTM
 
-Optionally, the client may add Urchin Tracking Module (UTM) parameters to the `fm.start()` function.
+The fm script automatically picks up Urchin Tracking Module (UTM) parameters from the URL on a client's asset. Optionally, if a client would like to override or otherwise directly set UTM parameters passed to our analytics systems, UTM parameters may be added to the `fm.start()` function.
 
 If included in the `fm.start()` function, the UTM parameters will follow a user through the path. This functionality is useful for advertising campaigns, such as those from Facebook or Google.
 
@@ -108,7 +108,7 @@ Any number of the available UTM parameters may be included in the function. For 
     page_name: window.location.pathname,
     alt_source: 'mainsite',
     router: {
-      linkTo: 'https://nextgenmedicine.fireflyxd.com/',
+      linkTo: 'https://nextgenmedicine.populus-media.net/',
     },
     utm_content: 'some UTM content',
   });
@@ -117,7 +117,9 @@ Any number of the available UTM parameters may be included in the function. For 
 
 ### Alternate UTM
 
-The `alt_source` parameter is used to specify the source of the link. For example, a client may use `fm` on multiple websites, and traffic coming into FXD would be tracked based on source by providing a different `alt_source` value on each website.
+As with normal UTM paramaters, the fm script automatically picks up alternate UTM paramaters from the URL on a client's asset. Optionally, if a client would like to override or otherwise directly set alternate UTM parameters passed to our analytics systems, alternate UTM parameters may be added to the `fm.start()` function.
+
+The `alt_source` parameter is used to specify the source of the link. For example, a client may use `fm` on multiple websites, and traffic coming into our path would be tracked based on source by providing a different `alt_source` value on each website.
 
 ```html
 <script type="text/javascript">
@@ -128,7 +130,7 @@ The `alt_source` parameter is used to specify the source of the link. For exampl
     page_name: window.location.pathname,
     alt_source: 'mainsite',
     router: {
-      linkTo: 'https://nextgenmedicine.fireflyxd.com/',
+      linkTo: 'https://nextgenmedicine.populus-media.net/',
     },
   });
 </script>
@@ -142,7 +144,7 @@ With the configuration set in the `fm.start()` script above, any links in a page
 This is my
 <a
   class="fm-link"
-  href="https://nextgenmedicine.fireflyxd.com/?alt_source=mainsite&engagement_id=GENERATED_FIREFLY_ENGAGEMENT_ID&master_id=GENERATED_FIREFLY_MASTER_ID"
+  href="https://nextgenmedicine.populus-media.net/?alt_source=mainsite&engagement_id=GENERATED_POPULUS_MEDIA_ENGAGEMENT_ID&master_id=GENERATED_POPULUS_MEDIA_MASTER_ID"
   >call-to-action link</a
 >.
 ```
@@ -187,7 +189,7 @@ A basic page that includes fm-slim, Google Analytics and a UTM parameter would b
 
     <script
       type="text/javascript"
-      src="https://fm.fireflyxd.io/3.1/fm-slim.js"
+      src="https://fm.populus-media.net/3.2/fm-slim.js"
     ></script>
 
     <script type="text/javascript">
@@ -202,7 +204,7 @@ A basic page that includes fm-slim, Google Analytics and a UTM parameter would b
         page_name: window.location.pathname,
         alt_source: 'mainsite',
         router: {
-          linkTo: 'https://nextgenmedicine.fireflyxd.com/',
+          linkTo: 'https://nextgenmedicine.populus-media.net/',
         },
         utm_content: 'some UTM content',
       });
