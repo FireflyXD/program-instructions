@@ -25,7 +25,7 @@ In order to populate a link inside a call-to-action button, the fm-slim package 
 ></script>
 ```
 
-After the fm-slim package script, the `fm.start()` function must be called. For example, if the client were "nextgenmedicine," the `fm.start()` call would incorporate the client name by passing it into the `program_id` parameter.
+After the fm-slim package script, the `fm.start()` function must be called. For example, if the client were "zetrello," the `fm.start()` call would incorporate the client name by passing it into the `program_id` parameter.
 
 ### Google Analytics
 
@@ -77,7 +77,7 @@ If the optional Google Analytics ID (`ga_id`) is set, the final link would look 
 This is my
 <a
   class="fm-link"
-  href="https://nextgenmedicine.populus-media.net/?ga_id=SOME_GA_ID&alt_source=mainsite&engagement_id=GENERATED_POPULUS_MEDIA_ENGAGEMENT_ID&master_id=GENERATED_POPULUS_MEDIA_MASTER_ID&"
+  href="https://zetrello.populus-media.net/?ga_id=SOME_GA_ID&alt_source=mainsite&engagement_id=GENERATED_POPULUS_MEDIA_ENGAGEMENT_ID&master_id=GENERATED_POPULUS_MEDIA_MASTER_ID&"
   >call-to-action link</a
 >.
 ```
@@ -103,12 +103,12 @@ Any number of the available UTM parameters may be included in the function. For 
 <script type="text/javascript">
   fm.start({
     current_path: 'brand',
-    program_id: 'nextgenmedicine',
+    program_id: 'zetrello',
     program_version: 'client',
     page_name: window.location.pathname,
     alt_source: 'mainsite',
     router: {
-      linkTo: 'https://nextgenmedicine.populus-media.net/',
+      linkTo: 'https://zetrello.populus-media.net/',
     },
     utm_content: 'some UTM content',
   });
@@ -125,12 +125,12 @@ The `alt_source` parameter is used to specify the source of the link. For exampl
 <script type="text/javascript">
   fm.start({
     current_path: 'brand',
-    program_id: 'nextgenmedicine',
+    program_id: 'zetrello',
     program_version: 'client',
     page_name: window.location.pathname,
     alt_source: 'mainsite',
     router: {
-      linkTo: 'https://nextgenmedicine.populus-media.net/',
+      linkTo: 'https://zetrello.populus-media.net/',
     },
   });
 </script>
@@ -144,21 +144,61 @@ With the configuration set in the `fm.start()` script above, any links in a page
 This is my
 <a
   class="fm-link"
-  href="https://nextgenmedicine.populus-media.net/?alt_source=mainsite&engagement_id=GENERATED_POPULUS_MEDIA_ENGAGEMENT_ID&master_id=GENERATED_POPULUS_MEDIA_MASTER_ID"
+  href="https://zetrello.populus-media.net/?alt_source=mainsite&engagement_id=GENERATED_POPULUS_MEDIA_ENGAGEMENT_ID&master_id=GENERATED_POPULUS_MEDIA_MASTER_ID"
   >call-to-action link</a
 >.
 ```
 
 ### Putting it all together
 
-A basic page that includes fm-slim, Google Analytics and a UTM parameter would be similar to the following:
+There are varying levels of complexity as it relates to integrating fm into a client's asset.
+
+To get a sense of how the integration works, you may copy and paste the HTML page texts below into simple HTML files, and run them locally for testing purposes.
+
+## Simple integration
+
+The simplest integration, which includes only the base elements needed for an integration, would look like the following. The following would be added to any page that includes a CTA button that leads to a Populus Media path:
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>NextGenMedicine</title>
+    <title>Zetrello</title>
+  </head>
+  <body>
+    <a class="fm-link" href="">Path link</a>
+
+    <script
+      type="text/javascript"
+      src="https://fm.populus-media.net/3.2/fm-slim.js"
+    ></script>
+
+    <script type="text/javascript">
+      fm.start({
+        current_path: 'brand',
+        program_id: 'zetrello', // Replace [zetrello] with client name in production
+        program_version: 'client',
+        page_name: window.location.pathname,
+        router: {
+          linkTo: 'https://zetrello.populus-media.net/', // Replace [zetrello] with client name in production
+        },
+      });
+    </script>
+  </body>
+</html>
+```
+
+## More complex integration
+
+For an integration that includes Google Analytics, an explicitly-set UTM parameter and an alternate source, the page would be similar to the following:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Zetrello</title>
   </head>
   <body>
     <a class="fm-link" href="">Path link</a>
@@ -199,12 +239,12 @@ A basic page that includes fm-slim, Google Analytics and a UTM parameter would b
 
       fm.start({
         current_path: 'brand',
-        program_id: 'nextgenmedicine',
+        program_id: 'zetrello', // Replace [zetrello] with client name in production
         program_version: 'client',
         page_name: window.location.pathname,
         alt_source: 'mainsite',
         router: {
-          linkTo: 'https://nextgenmedicine.populus-media.net/',
+          linkTo: 'https://zetrello.populus-media.net/', // Replace [zetrello] with client name in production
         },
         utm_content: 'some UTM content',
       });
