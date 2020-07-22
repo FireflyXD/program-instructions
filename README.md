@@ -111,12 +111,12 @@ Any number of the available UTM parameters may be included in the function. For 
 <script type="text/javascript">
   fm.start({
     current_path: 'brand',
-    program_id: 'zetrello',
+    program_id: 'zetrello', // Replace [zetrello] with client name in production
     program_version: 'client',
     page_name: window.location.pathname,
     alt_source: 'mainsite',
     router: {
-      linkTo: 'https://zetrello.populus-media.net/',
+      linkTo: 'https://zetrello.populus-media.net/', // Replace [zetrello] with client name in production
     },
     utm_content: 'some UTM content',
   });
@@ -133,12 +133,12 @@ The `alt_source` parameter is used to specify the source of the link. For exampl
 <script type="text/javascript">
   fm.start({
     current_path: 'brand',
-    program_id: 'zetrello',
+    program_id: 'zetrello', // Replace [zetrello] with client name in production
     program_version: 'client',
     page_name: window.location.pathname,
     alt_source: 'mainsite',
     router: {
-      linkTo: 'https://zetrello.populus-media.net/',
+      linkTo: 'https://zetrello.populus-media.net/', // Replace [zetrello] with client name in production
     },
   });
 </script>
