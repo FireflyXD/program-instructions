@@ -14,8 +14,12 @@ The Populus Media Website Tracking Code is designed to seamlessly integrate any 
   * [Putting it all together](#putting-it-all-together)
     * [Simple integration](#simple-integration)
     * [More complex integration](#more-complex-integration)
+* [Insta Connect](#insta-connect)
+  * [How to import](#how-to-import)
 
 # Custom Connect
+
+Custom Connect is Populus Media's full service offering.
 
 ## How to install
 
@@ -263,3 +267,43 @@ For an integration that includes Google Analytics, an explicitly-set UTM paramet
   </body>
 </html>
 ```
+
+# Insta Connect
+
+Insta Connect is Populus Media's light service offering.
+
+## How to import
+
+The fm-slim JavaScript package places a floating call-to-action button on any page where it is installed.
+
+First, import the fm-slim package on the page where you want the floating CTA to appear. The import may be placed just before the closing body tag in your document:
+
+```html
+<script
+  type="text/javascript"
+  src="https://fm.populus-media.net/3.2/fm-slim.js"
+></script>
+```
+
+Second, just after the import of the fm-slim package, add the folling:
+
+```html
+<script type="text/javascript">
+      fm.start({
+        current_path: 'brand',
+        program_id: 'zetrello', // Replace [zetrello] with client name in production
+        program_version: 'client',
+        page_name: window.location.pathname,
+        fab: {
+          isActive: true,
+          brand_name: 'Zetrello', // Replace [zetrello] with the brand name in production
+          style: {} // optional style object. All HTML DOM styles are available: https://www.w3schools.com/jsref/dom_obj_style.asp
+        },
+        router: {
+          linkTo:'https://telemed-zetrello.populus-media.net/', // Replace [zetrello] with client name in production. Do not replace [telemed]
+        },
+      });
+    </script>
+```
+
+The fm-slim package will handle routing to the Populus path.
