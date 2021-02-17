@@ -300,7 +300,7 @@ Second, just after the import of the fm-slim package, add the folling:
       style: {} // optional style object. All HTML DOM styles are available: https://www.w3schools.com/jsref/dom_obj_style.asp
     },
     router: {
-      linkTo:'https://telemed-zetrello.populus-media.net/', // Replace [zetrello] with client name in production. Do not replace [telemed].
+      linkTo:'https://telemed-zetrello.populus-media.net/', // Replace [zetrello] with client name in production. Do not replace [telemed-].
     },
   });
 </script>
