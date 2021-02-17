@@ -6,13 +6,16 @@ The Populus Media Website Tracking Code is designed to seamlessly integrate any 
 
 2. CTA connectivity - the tracking code automatically connects CTA buttons that drive to the Populus Media Path with proper user identifiers to allow cross-domain analysis.
 
-* [How to install](#how-to-install)
-* [Google Analytics](#google-analytics)
-* [UTM](#utm)
-* [Alternate UTM](#alternate-utm)
-* [Putting it all together](#putting-it-all-together)
-  * [Simple integration](#simple-integration)
-  * [More complex integration](#more-complex-integration)
+* [Custom Connect](#custom-connect)
+  * [How to install](#how-to-install)
+  * [Google Analytics](#google-analytics)
+  * [UTM](#utm)
+  * [Alternate UTM](#alternate-utm)
+  * [Putting it all together](#putting-it-all-together)
+    * [Simple integration](#simple-integration)
+    * [More complex integration](#more-complex-integration)
+
+# Custom Connect
 
 ## How to install
 
