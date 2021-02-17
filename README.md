@@ -289,21 +289,21 @@ Second, just after the import of the fm-slim package, add the folling:
 
 ```html
 <script type="text/javascript">
-      fm.start({
-        current_path: 'brand',
-        program_id: 'zetrello', // Replace [zetrello] with client name in production
-        program_version: 'client',
-        page_name: window.location.pathname,
-        fab: {
-          isActive: true,
-          brand_name: 'Zetrello', // Replace [zetrello] with the brand name in production
-          style: {} // optional style object. All HTML DOM styles are available: https://www.w3schools.com/jsref/dom_obj_style.asp
-        },
-        router: {
-          linkTo:'https://telemed-zetrello.populus-media.net/', // Replace [zetrello] with client name in production. Do not replace [telemed]
-        },
-      });
-    </script>
+  fm.start({
+    current_path: 'brand',
+    program_id: 'zetrello', // Replace [zetrello] with client name in production
+    program_version: 'client',
+    page_name: window.location.pathname,
+    fab: {
+      isActive: true,
+      brand_name: 'Zetrello', // Replace [zetrello] with the brand name in production
+      style: {} // optional style object. All HTML DOM styles are available: https://www.w3schools.com/jsref/dom_obj_style.asp
+    },
+    router: {
+      linkTo:'https://telemed-zetrello.populus-media.net/', // Replace [zetrello] with client name in production. Do not replace [telemed].
+    },
+  });
+</script>
 ```
 
 The fm-slim package will handle routing to the Populus path.
